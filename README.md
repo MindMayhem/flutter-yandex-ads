@@ -1,22 +1,18 @@
 # flutter_yandex_ads
 
-Yandex ADS for flutter applicaitions
-
-[Donnations](https://www.tinkoff.ru/cf/6xz8n4h0LzO)
+Yandex Mobile Ads для Flutter (based on https://gitflic.ru/project/kovardin/flutter-yandex-ads)
 
 ## Roadmap
 
 Android
 - [x] Banner
 - [x] Interstitial
-- [ ] Native
-- [ ] Rewarded
+- [x] Rewarded
 
 iOS
 - [x] Banner
 - [x] Interstitial
-- [ ] Native
-- [ ] Rewarded
+- [ ] Rewarded (В работе)
 
 
 ## Getting Started
@@ -26,17 +22,21 @@ Install package
 ```yaml
 flutter_yandex_ads:
   git:
-    url: https://gitflic.ru/project/kovardin/flutter-yandex-ads.git
+    url: https://github.com/MindMayhem/flutter-yandex-ads
 ```
 
-For android add to AndroidManifest.xml
+### Android
+
+Добавьте в AndroidManifest.xml:
 
 ```xml
 
 <uses-permission android:name="com.google.android.gms.permission.AD_ID" tools:node="remove"/>
 ```
 
-For ios add to Info.plist
+### IOS
+
+Добавьте в Info.plist:
 
 ```xml
 <key>SKAdNetworkItems</key>
@@ -47,21 +47,22 @@ For ios add to Info.plist
 </dict>
 </array>
 ```
-And set for ios in Podfile
+
+Podfile:
 
 ```
 #use_frameworks!
 ```
 
 
-Call initialization in main.dart
+Инициализируйте в main.dart
 
 ```dart
 FlutterYandexAds ads = new FlutterYandexAds();
 ads.initialize();
 ```
 
-Created banner widget:
+### Баннер
 
 ```dart
 Container(
@@ -86,8 +87,6 @@ Container(
 ```
 
 ## Advanced development
-
-Generate pigeons files fo
 
 ```
 flutter pub run pigeon \
